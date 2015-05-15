@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="tr-TR">
+<head>	
+
+    <meta http-equiv="content-type" content="text/html" charset="iso-8859-9">
+    <meta http-equiv="content-type" content="text/html" charset="windows-1254">
+    <meta http-equiv="content-type" content="text/html" charset="x-mac-turkish">
+    
+    <title>{{ title }}</title>
+
+    <!-- include css & less -->
+    <link rel="stylesheet" href="/_assets/css/main/bootstrap.min.css">
+    <link rel="stylesheet" href="/_assets/css/main/font-awesome.css">
+    <link rel="stylesheet" href="/_assets/css/site/layout.css">
+    <link rel="stylesheet" href="/_assets/css/site/menu.css">
+    <link rel="stylesheet" href="/_assets/css/site/main.css">
+    {% block head %} {% endblock %}
+</head>
+<body>
+    <header>
+    	<div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <a href="#" class="logo">
+                        <img src="/" alt="LOGO">
+                    </a>
+                    <ul class="menu">
+                    	<li><a href="#">Anasayfa</a></li>
+                    	<li><a href="#">Kategori 1</a></li>
+                    	<li><a href="#">Kategori 2</a></li>
+                    	<li><a href="#">İşlerim</a></li>
+                    	<li><a href="#">Ben Kimim</a></li>
+                    	<li><a href="#">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+    	</div>
+    </header>
+
+    <section>
+        {% block content %} {% endblock %}
+    </section>
+
+    
+
+    <footer>
+    	
+    </footer>
+
+
+    {% block foot %} {% endblock %}
+    <script src="/_assets/js/main/jquery.js" type="text/javascript"></script>
+    <!--<script src="/_assets/js/main/angular.js" type="text/javascript"></script>
+    <script src="/_assets/js/main/angular-animate.js" type="text/javascript"></script>-->
+    <script src="/_assets/js/main/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/_assets/js/site/layout.js" type="text/javascript"></script>
+    <script src="/_assets/js/site/menu.js" type="text/javascript"></script>
+</body>
+</html>

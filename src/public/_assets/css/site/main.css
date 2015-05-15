@@ -1,0 +1,63 @@
+* {
+    font-family: Tahoma, Calibri, Arial, sans-serif;
+}
+
+:root,body {
+    background-color: #f3f4f4;
+}
+
+    *:focus {
+        outline: none;
+    }
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+form {
+    margin: 0px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin: 25px 0 10px 0;
+}
+
+h1 {
+    color: #e74c3c;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+a {
+    color: #e74c3c;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+}
+
+input {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+}
+
+.social-item {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
