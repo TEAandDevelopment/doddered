@@ -46,3 +46,28 @@ header {
                 color: #2f343b;
                 border-bottom: 4px solid #57ab69;
             }
+
+    header .menu-social {
+        list-style: none;
+        margin: 0px;
+        float: right;
+    }
+
+    header .menu-social li {
+        float: left;
+        line-height: 70px;
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        border-left: 1px solid #dfe2e4;
+    }
+
+    header .menu-social li a {
+        height: 70px;
+        width: 70px;
+        display: block;
+    }
+
+    header .menu-social li:last-of-type {
+        border-right: 1px solid #dfe2e4;
+    }
