@@ -7,7 +7,7 @@ var BlogPostSchema = new mongoose.Schema({
     content: String
 }); //blog post için schema (model) oluþturuyorum
 
-var blogPostItem = db.model("blogPost", BlogPostSchema);
-mongoose.model("blogPost", BlogPostSchema);//dbye schemamý ekliyorum
+var blogPostItem = db.model("blogposts", BlogPostSchema);
+mongoose.model("blogposts", BlogPostSchema);//dbye schemamý ekliyorum
 
 module.exports = blogPostItem; //return blog post schema

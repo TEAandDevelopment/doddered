@@ -3,15 +3,12 @@
     db = mongoose.createConnection(config().db),//db değişkenini oluşturuyorum
     BlogPostModel = require("../../models/blog-post");//database'den gelen veriyi tutmak için blog post'un schema'sını ekliyorum
 
-var GetAll = function () {
-    this.BlogPostList = {};//geri döndürülmek için değişken oluşturuyorum
+var GetAll = function (callback) {
     BlogPostModel.find({}, function (error, users) {
         //bu fonksiyon sadece success değildir ayrıca error de buraya döner parametreler ile kontrol mümkündür
         //1. parametre error 2. parametre response'dur
-
-        BlogPostList = users;//GetAll fonksiyonunun scope'undaki değişkene atama yapıyorum
+        callback(users);
     });//db'den get işlemi yapıyorum
-    return this.BlogPostList;//gelen user geri döndürüyorum
 }
 
 var GetById = function (id) {

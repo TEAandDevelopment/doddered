@@ -2,10 +2,13 @@ var BlogPostFacade = require("../../dbworks/blog-posts/get");//blog post db iþle
 
 module.exports = function (app) {
     app.get("/", function (request, response) {
-        var PostList = BlogPostFacade.GetAll();
-        response.render("site/home-page.html", {
-            title: "Anasayfa :: Talha Emin AYDEMÝR",
-            items: PostList
+
+        BlogPostFacade.GetAll(function (data) {
+            response.render("site/home-page.html", {
+                title: "Anasayfa :: Talha Emin AYDEMÝR",
+                items: data
+            });
         });
+
     });
 }
