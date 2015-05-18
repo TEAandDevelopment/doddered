@@ -7,19 +7,17 @@ var GetAll = function (callback) {
     BlogPostModel.find({}, function (error, users) {
         //bu fonksiyon sadece success değildir ayrıca error de buraya döner parametreler ile kontrol mümkündür
         //1. parametre error 2. parametre response'dur
-        callback(users);
+        callback(users);//get işlemi tamamlanınca parametre olarak gelen fonksiyona gelen datayı göndererek işlem yaptırıyorum
     });//db'den get işlemi yapıyorum
 }
 
-var GetById = function (id) {
-    this.blogPostItem = {};//geri döndürülmek için değişken oluşturuyorum
+var GetById = function (id, callback) {
     blogPostModel.find({ "_id.$oid": id }, function (err, user) {
         //bu fonksiyon sadece success değildir ayrıca error de buraya döner parametreler ile kontrol mümkündür
         //1. parametre error 2. parametre response'dur
 
-        blogPostItem = user;//GetById fonksiyonunun scope'undaki değişkene atama yapıyorum
+        callback(user);//get işlemi tamamlanınca parametre olarak gelen fonksiyona gelen datayı göndererek işlem yaptırıyorum
     });//db'den get işlemi yapıyorum
-    return this.blogPostItem;//gelen user geri döndürüyorum
 }
 
 module.exports.GetAll = GetAll;//geri döndürülecek fonksiyonu ekliyorum
